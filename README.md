@@ -1,23 +1,12 @@
-# Music Downloader Bot (Advanced)
+# Apple Music Info Bot
 
-این نسخه‌ی پیشرفته از ربات تلگرام برای دریافت آهنگ از Apple Music است.
+رباتی ساده برای دریافت مشخصات آهنگ از لینک Apple Music و نمایش کاور و اطلاعات.
 
-## امکانات:
-- دریافت اطلاعات از لینک Apple Music
-- جستجوی آهنگ در یوتیوب
-- دریافت لینک دانلود مستقیم
-- ارسال فایل MP3 در تلگرام
+## استفاده:
+لینک Apple Music رو بفرست → مشخصات آهنگ و کاورش رو دریافت کن.
 
-## مراحل اجرا در Render:
+## راه‌اندازی در Render:
 
-1. وارد [https://render.com](https://render.com) شو
-2. روی New Web Service کلیک کن
-3. این ریپو رو انتخاب کن
-4. تنظیمات:
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `python3 main.py`
-   - **Env Var:** `BOT_TOKEN`
-
-> توجه: آدرس API یوتیوب فیکه و باید جایگزین بشه با یه سرویس واقعی مثل yt-dlp سرور شخصی یا 3rd-party API.
-
-سورس کد فقط جهت تست آموزشی آماده شده.
+- Build command: pip install -r requirements.txt
+- Start command: python3 main.py
+- Env var: BOT_TOKEN (توکن ربات تلگرام)

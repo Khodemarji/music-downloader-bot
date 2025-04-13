@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: music-downloader-bot
+    name: music-info-bot
     env: python
     plan: free
     buildCommand: "pip install -r requirements.txt"
