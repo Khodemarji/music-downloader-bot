@@ -12,7 +12,6 @@ def extract_apple_music_info(url):
     try:
         response = requests.get(url)
         if response.ok:
-            # استخراج عنوان از تگ <title>
             title_match = re.search(r'<title>(.*?)</title>', response.text)
             image_match = re.search(r'(https://is[^"]+\.jpg)', response.text)
             if title_match:
@@ -43,8 +42,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("اطلاعاتی از این لینک پیدا نشد.")
         return
 
-    caption = f"*{track}*
-by _{artist}_" if artist else f"*{track}*"
+    caption = f"*{track}*\nby _{artist}_" if artist else f"*{track}*"
     if image_url:
         await update.message.reply_photo(photo=image_url, caption=caption, parse_mode="Markdown")
     else:
